@@ -1,0 +1,8 @@
+{
+    "name": "Gemini AI Edit (Bilingual)",
+    "version": "1.0",
+    "manifest_version": 2,
+    "description": "Photopea plugin for AI-powered image editing via Google Gemini API, supports Arabic & English",
+    "icons": ["icon.png"],
+    "main": "index.html"
+}
