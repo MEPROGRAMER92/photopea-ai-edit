@@ -1,0 +1,11 @@
+{
+  "environment": {
+    "plugins": [
+      {
+        "name": "AI Edit (Smart)",
+        "url": "https://<YOUR_GH_USERNAME>.github.io/<YOUR_REPO_NAME>/index.html",
+        "icon": "===https://<YOUR_GH_USERNAME>.github.io/<YOUR_REPO_NAME>/icon.png"
+      }
+    ]
+  }
+}
