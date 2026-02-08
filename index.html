@@ -1,87 +1,12 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>AI Edit (Smart) — Google</title>
-  <link rel="stylesheet" href="styles.css" />
-</head>
-<body>
-  <div class="app">
-    <header class="header">
-      <div class="brand">
-        <img src="icon.png" alt="icon"/>
-        <div class="title" id="t_title">AI Edit (Smart)</div>
-      </div>
-      <div class="lang">
-        <select id="langSel">
-          <option value="en">English</option>
-          <option value="ar">العربية</option>
-        </select>
-      </div>
-    </header>
-
-    <section class="card">
-      <label class="label" id="t_promptLabel">Prompt</label>
-      <textarea id="prompt" rows="3" class="input" placeholder="e.g., remove the person on the left // replace the sky with sunset // add a coffee cup"></textarea>
-      <div class="row">
-        <label class="chk"><input type="checkbox" id="autoIntent" checked /><span id="t_autoIntent">Auto‑detect intent (Remove / Replace / Generate)</span></label>
-        <span id="intentBadge" class="badge">mode: auto</span>
-      </div>
-    </section>
-
-    <section class="grid">
-      <div class="card">
-        <div class="sectionTitle" id="t_conn">Connection</div>
-        <div class="row">
-          <label class="label" id="t_endpointLabel">Server endpoint (Vertex AI)</label>
-          <input id="serverUrl" class="input" placeholder="https://YOUR-CLOUD-RUN-URL/edit"/>
-        </div>
-        <div class="row">
-          <label class="label" id="t_geminiKey">Gemini API Key (optional)</label>
-          <input id="geminiKey" class="input" placeholder="AIza..."/>
-        </div>
-        <div class="hint" id="t_hint">Gemini rewrites your prompt; masked editing runs on Vertex Imagen on the server.</div>
-      </div>
-
-      <div class="card">
-        <div class="sectionTitle" id="t_mask">Mask</div>
-        <div class="tools">
-          <button id="fetchImage" class="btn primary"><span id="t_fetch">Fetch from Photopea</span></button>
-          <div class="sep"></div>
-          <label id="t_brush" class="label">Brush</label>
-          <input id="brushSize" type="range" min="4" max="80" value="26"/>
-          <label class="chk"><input type="checkbox" id="erase"><span id="t_erase">Erase</span></label>
-          <button id="rectTool" class="btn"><span id="t_rect">Rect mask</span></button>
-          <button id="clearMask" class="btn danger"><span id="t_clear">Clear mask</span></button>
-        </div>
-        <div class="canvasWrap">
-          <canvas id="imgCanvas"></canvas>
-          <canvas id="maskCanvas"></canvas>
-        </div>
-        <div class="hint" id="t_paintHint">Paint or drag a rectangle over the area you want to edit. Painted area = will be edited.</div>
-      </div>
-    </section>
-
-    <section class="actions">
-      <button id="run" class="btn primary"><span id="t_run">Run</span></button>
-      <button id="openResult" class="btn"><span id="t_openResult">Open Result in Photopea</span></button>
-      <span id="status" class="status"></span>
-    </section>
-
-    <footer class="footer">
-      <details>
-        <summary id="t_how">How it works</summary>
-        <ul id="t_howList">
-          <li>Fetch flattened PNG via <code>saveToOE('png')</code>.</li>
-          <li>Create transparent PNG mask (transparent = edit area).</li>
-          <li>Infer intent and optionally rewrite with Gemini.</li>
-          <li>POST to your server → Vertex AI Imagen inpainting.</li>
-          <li>Open the PNG result in Photopea.</li>
-        </ul>
-      </details>
-    </footer>
-  </div>
-  <script type="module" src="script.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Phaser Combat Prototype</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
 </html>
