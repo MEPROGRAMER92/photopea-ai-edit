@@ -1,0 +1,21 @@
+body {
+  margin: 0;
+  background: #0f1115;
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+}
+
+#app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+input[type='text'] {
+  padding: 8px 12px;
+  font-size: 16px;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+}
